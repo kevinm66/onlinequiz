@@ -89,9 +89,9 @@ Logged as <a href="#" class="button username">${sessionScope.user}</a>
 <table cellpadding="0" cellspacing="50">
 
 <tr>
-<td><a href="takeExam?test=soa"><img height="200" width="200" src="${pageContext.request.contextPath}/images/soa.jpg" title="Klikni pre spustenie "/></a></td>
+<td><img height="200" width="200" src="${pageContext.request.contextPath}/images/soa.jpg" title="Test je momentalne neaktivny "/></a></td>
 <td><img height="200" width="200" src="${pageContext.request.contextPath}/images/archimate.png" title="Test zatial nie je implementovany"/></td>
-<td><img height="200" width="200" src="${pageContext.request.contextPath}/images/Bizzdesign.png" title="Test zatial nie je implementovany"/></td>
+<td><a href="takeExam?test=java"><img height="200" width="200" src="${pageContext.request.contextPath}/images/java.png" title="Klikni pre spustenie"/></td>
 <%-- <td><a href="takeExam?test=sql"><img height="200" width="200" src="${pageContext.request.contextPath}/images/sql-logo.png"/></a></td>--%>
 
 </tr>
@@ -109,3 +109,4 @@ Logged as <a href="#" class="button username">${sessionScope.user}</a>
 
 </body>
 </html>
+	

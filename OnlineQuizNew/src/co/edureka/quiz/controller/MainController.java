@@ -63,7 +63,7 @@ public class MainController extends HttpServlet {
 				System.out.println(exam);
 				Connection con=DatabaseConnectionFactory.createConnection();
 				ResultSet set=null;
-				ResultSet set1=null;
+				ResultSet set3=null;
 				ResultSet set2=null;
 				String username=request.getSession().getAttribute("user").toString();
 				try
@@ -71,17 +71,22 @@ public class MainController extends HttpServlet {
 				 Statement st=con.createStatement();
 				 Statement st1=con.createStatement();
 				 Statement st2=con.createStatement();
+				 Statement st3=con.createStatement();
 				 String sql = "Select name,score,date from  results where test='"+exam+"' order by score desc limit 10 ";
 				 String sql1 = "Select name,score,date from  results where test='"+exam+"' and name='"+username+"' order by score desc limit 10 ";
 				 String sql2= "Select count(*) from results where name='"+username+"'";
-				 
+				 String sql3= "Select max(status) from tests where test_name='"+exam+"'";
 				 System.out.println(sql);
 				 set=st.executeQuery(sql);
 				 set2=st2.executeQuery(sql2);
+				 set3=st3.executeQuery(sql3);
 				 set2.next();
+				 set3.next();
+				 int runningExam = set3.getInt(1);
 				 int hasFinishedExam= set2.getInt(1);
 				 
 				 request.getSession().setAttribute("hasFinishedExam",hasFinishedExam );
+				 request.getSession().setAttribute("runningExam",runningExam );
 				 
 				 request.getSession().setAttribute(exam, set);
 				// System.out.println(set+","+set.getString(1));

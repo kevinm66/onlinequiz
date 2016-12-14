@@ -19,7 +19,7 @@ body {
 
 </head><br/>
 <body onload="examTimer()">
-<div style="position:absolute;left:50px;top:20px;color:#dfe9ec">
+<div style="position:absolute;left:50px;top:40px;color:#dfe9ec">
 <%
   int currentQuestion=((Exam)request.getSession().getAttribute("currentExam")).getCurrentQuestion();
 int testsize=((Exam)request.getSession().getAttribute("currentExam")).getTestSize();
@@ -28,12 +28,15 @@ int testsize=((Exam)request.getSession().getAttribute("currentExam")).getTestSiz
 Current Question ${sessionScope.quest.questionNumber+1} / ${sessionScope.totalNumberOfQuizQuestions}
 </div>
 
-<div id="showtime" style="position:absolute;left:800px;top:20px"></div>
+<div id="showtime" style="position:absolute;left:600px;top:40px"></div>
 
- <div style="position:absolute;width:1000px;padding:15px; color:#dfe9ec;
+<!-- <div style="position:absolute;width:1000px;padding:15px; color:#dfe9ec;
   height: 380px;border: 1px solid green ;left:100px;top:60px;font-size: 19px;">
- <span style="font-size: 19px;">${sessionScope.quest.question}</span>
-
+ -->
+ <div style="padding:15px; color:#dfe9ec; width:1000px; border: 1px solid green ;left:100px;top:80px;font-size: 19px;">
+  
+  <br>
+ <span style="font-size: 19px;"><pre style="font-size: 15px;" >${sessionScope.quest.question}</pre></span>
 <form id="questionForm" action="${pageContext.request.contextPath}/exam" method="post" >
 <table class="CSSExamTable">
 
@@ -51,7 +54,8 @@ Current Question ${sessionScope.quest.questionNumber+1} / ${sessionScope.totalNu
  
  </table>
  <br/> 
- <table style="width:50%;position:absolute;top:340px;">
+ <!-- <table style="width:50%;position:absolute;top:340px;"> --> 
+ <table style="width:50%">
  <tr>
  <%
    if(currentQuestion > 0)

@@ -81,8 +81,12 @@ public class ExamResultsController extends HttpServlet {
 			{
 			 Statement st=con.createStatement();
 			
-			 String sql = "select * from (select max(date) as max_date from results_detailed where name='"+username+"' group by question) t1 inner join results_detailed t2 on t1.max_date=t2.date order by question ";
-			
+			 String sql = "select * from (select max(date) as max_date,question from results_detailed where name='"+username+"' group by question) t1 inner join results_detailed t2 on t1.max_date=t2.date and t1.question=t2.question order by t1.question ";
+			//select * from (select max(date) as max_date from results_detailed 
+			// where name='stanislav' and session= 
+			//		 (select session from results_detailed where date=(select max(date) from results_detailed where name='stanislav'))
+			//		 group by question) t1 
+			//		 inner join results_detailed t2 on t1.max_date=t2.date order by question 
 			 
 			 System.out.println(sql);
 			 set=st.executeQuery(sql);

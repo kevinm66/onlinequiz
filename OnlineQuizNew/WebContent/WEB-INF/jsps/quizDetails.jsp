@@ -165,7 +165,8 @@ while(set2.next())
  <%
  
     Integer hasFinished = (Integer) request.getSession().getAttribute("hasFinishedExam");
-   if(hasFinished > 0)
+ Integer runningExam = (Integer) request.getSession().getAttribute("runningExam");
+   if(hasFinished > 0 && runningExam==0)
    {
  %>
 
