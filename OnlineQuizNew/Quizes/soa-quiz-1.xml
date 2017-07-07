@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<quiz>
+  <title>SOA Quiz (12/3/2016)</title>
+  <size>15</size>
+  <quizDuration>25</quizDuration>
+    <questions>
+    
+   <question>
+ <quizquestion>Vyhodou a cielom SSI je ze:</quizquestion>
+<answer>Poskytovatel sluzby zvysi svoju dostupnost pocas uzavierky</answer>
+<answer>Konzument sluzby vie lepsie rozlisovat nedostupnost poskytovatelov</answer>
+<answer>Poskytovatel sluzby poskytuje informaciu o svojej nedostupnosti</answer>
+<answer>Konzument sluzby cita data z SSI namiesto poskytovatela sluzby (v pripade jeho nedostupnosti.)</answer>
+  <correct>2</correct>
+	<correct>3</correct>
+
+ </question>
+
+<question>
+ <quizquestion>Ktore z nasledujucich tvrdeni je pravdive?:</quizquestion>
+<answer>Ak poskytovatel nevie zabezpecit 24x7 dostupnost sluzby, je potrebne implmentovat on line replikaciu dat zo zdrojoveho systemu</answer>
+<answer>Sluzba musi mat aspon taku dostupnost ako pozaduje "najprisnejsi" konzument</answer>
+<answer>Pokial ma poskytovatel nizsiu dostupnost ako vyzaduje odberatel moze MW_APP implementovat nacitavanie dat z ODS v pripade nedostupnosti poskytovatela</answer>
+<answer>Odberatelia sa musia vzdy prisposobit SLA parametrom poskytovanej sluzby</answer>
+  <correct>2</correct>
+	<correct>3</correct>
+ </question>
+
+<question>
+ <quizquestion> Preferovanou transportnou technologiou pre integracie medzi aplikaciami je:</quizquestion>
+<answer>MQ</answer>
+<answer>XML</answer>
+<answer>HTTP/S</answer>
+<answer>Corba</answer>
+  <correct>1</correct>
+	<correct>3</correct>
+ </question>
+
+<question>
+ <quizquestion>Sulad rozhrani s principmi mozete zistit:</quizquestion>
+<answer>V Service library na EA Sharepointe</answer>
+<answer>V profile objektu Application Interface v Centralnom modeli</answer>
+<answer>V profile objektu Application Component v Centralnom modeli</answer>
+<answer>Na ARB</answer>
+  <correct>2</correct>
+	<correct>4</correct>
+ </question>
+
+<question>
+ <quizquestion> Ktore z nasledujucich tvrdeni je pravdive?:</quizquestion>
+<answer>Do SrvLib ukladame BBSS pre tie sluzby, ktore maju viac ako jedneho odberatela</answer>
+<answer>Do SrvLib ukladame povinne BBSS pre enterprise sluzby a nepovinne pre dedikovane sluzby</answer>
+<answer>Do SrvLib ukladame XSD v pripade, ze sluzby pouzivaju externi dodavatelia</answer>
+<answer>Do SrvLib ukladame celu specifikaciu kazdej online sluzby (OIF)</answer>
+  <correct>4</correct>
+ </question>
+
+
+<question>
+ <quizquestion>Ak je sluzba konzumovana troma odberatelmi, s najvacsou pravdepodobnostou to znamena ze:</quizquestion>
+<answer>Ide o dedikovanu sluzbu pre tychto odberatelov</answer>
+<answer>Ide o enterprise sluzbu</answer>
+<answer>Sluzba by mala byt poskytnuta cez MW_APP (middleware)</answer>
+<answer>Sluzba by v pripade nedostupnosti mala informovat SSI</answer>
+  <correct>2</correct>
+ </question>
+
+
+<question>
+ <quizquestion>V pripade, ze konzument sluzby nepotrebuje cakat na odpoved od poskytovatela pred dalsim spracovanim, by mal:</quizquestion>
+<answer>Poslat informaciu do SSI</answer>
+<answer>Pouzit asynchronny messaging</answer>
+<answer>Pouzit synchronnu komunikaciu cez HTTP</answer>
+<answer>Pouzit MW_APP alebo MW_Events_Hub</answer>
+  <correct>2</correct>
+ </question>
+
+
+<question>
+ <quizquestion>Integracia na FE vrstve (preklik) by mala:</quizquestion>
+<answer>Byt vykonana cez zaslanie XML s parametrami pomocou HTTP Get</answer>
+<answer>Osetrit situaciu ze volajuca aplikacia nedostane odpoved</answer>
+<answer>Umoznit aj manualne spustenie volanej aplikacie</answer>
+<answer>Zabezpecit aby volajuca aplikacia zasielala navratovu URL v pripade potreby vratenia riadenia</answer>
+  <correct>2</correct>
+	<correct>4</correct>
+ </question>
+
+<question>
+ <quizquestion>Ktory format sa pouziva na formatovanie sprav v ramci SOA:</quizquestion>
+<answer>HTTP</answer>
+<answer>SOAP</answer>
+<answer>MSMQ</answer>
+<answer>XML</answer>
+  <correct>2</correct>
+  <correct>4</correct>
+ </question>
+
+<question>
+ <quizquestion>Ktore z nasledujucich tvrdeni nie je pravdive?:</quizquestion>
+<answer>Proces s manualnou interakciou by mal byt implementovany v ramci MW_APP. </answer>
+<answer>MW_APP by nemal byt pouzivany pri komunikacii s externymi systemami</answer>
+<answer>Na MW_APP nie je povolene vystavovat sluzby, ktore ukladaju vlastne biznis data</answer>
+<answer>Pre orchestraciu viacerych sluzieb by mal byt prednostne pouzity CBL servis. </answer>
+  <correct>1</correct>
+	<correct>2</correct>
+  <correct>4</correct>
+ </question>
+
+<question>
+ <quizquestion>Ktore z nasledujucich tvrdeni dava zmysel?:</quizquestion>
+<answer>Vytvorim 3 SOAP web sluzby, kazda z nich ma vlastnu WSDL definiciu, z coho 2 WSDL definicie zdielaju tu istu XML schemu.</answer>
+<answer>Vytvorim 3 XML  schemy, z ktorych 2 su pouzite tou istou WSDL definiciou. </answer>
+<answer>Vytvorim 3 WSDL definicie a 3 XML schemy. Kazda WSDL definicia sa vztahuje na svoju vlastnu XML schemu. </answer>
+<answer>Ziadna z vyssie uvedenych nedava zmysel</answer>
+  <correct>1</correct>
+	<correct>2</correct>
+	<correct>3</correct>
+ </question>
+
+
+<question>
+ <quizquestion>Ktore z nasledujucich tvrdeni je pravdive?:</quizquestion>
+<answer>REST sluzby sa primarne spoliehaju na pouzitie SOAP hlaviciek pre vymenu metadat jednotlivych sprav. </answer>
+<answer>REST sluzby sa primarne spoliehaju na pouzitie JMS hlaviciek pre vymenu metadat jednotlivych sprav. </answer>
+<answer>REST sluzby sa primarne spoliehaju na pouzitie HTTP hlaviciek pre vymenu metadat jednotlivych sprav. </answer>
+<answer>REST sluzby si vzajomne nevymienaju spravy s hlavickami</answer>
+	<correct>3</correct>
+ </question>
+
+<question>
+ <quizquestion>Ktore z nasledujucich tvrdeni dava zmysel?:</quizquestion>
+<answer>Mam 3 REST sluzby, pricom 2 z nich nepodporuju PUT metodu.</answer>
+<answer>Mam 3 REST sluzby, pricom 2 z nich maju PUT operaciu definovanu v definicii SOAP hlavicky  v danej WSDL definicii. </answer>
+<answer>Mam 3 REST sluzby, pricom 2 z nich nepodporuju HTTP. </answer>
+<answer>Ziadna z vyssie uvedenych nedava zmysel</answer>
+	<correct>1</correct>
+ </question>
+
+
+<question>
+ <quizquestion>Ktore z nasledujucich tvrdeni je pravdive?:</quizquestion>
+<answer>Pouzitie routovacich funkcionalit na MW_APP je vhodna pre naplnenie smerovacich poziadaviek ktore su dynamicke alebo je zlozite predpovedat. </answer>
+<answer>Pouzitie  routovacich funkcionalit na MW_APP je vhodna pre pripady kde je smerovanie sprav predvidatelne a nemoze sa menit pocas behu sluzby. </answer>
+<answer>Pouzitie  routovacich funkcionalit na MW_APP vedie k zvyseniu prevadzkovej vykonnosti v porovnani s pristupom ak je smerovacia logika vstavana v samotnych aplikaciach. </answer>
+<answer>Vsetky vyssie uvedene su pravdive</answer>
+  <correct>1</correct>
+ </question>
+
+
+<question>
+ <quizquestion>Sluzba A a sluzba B patria organizacii X. Sluzba C patri organizacii Y. Sluzba A posle citlivu spravu sluzbe B, ktora spracuje a nasledne preposle tuto spravu sluzbe C. Sprava poslana sluzbe C prechadza cez load balancer sluzbu, ktora  urcuje na ktoru instanciu sluzby C je sprava preposlana. Tato celkova cesta spravy potrebuje byt sifrovana za ucelom ochrany citlivosti spravy. Organizacia X neveri ziadnym sprostredkovatelom, ktore sa mozu nachadzat medzi sluzbou B a C a taktiez nechce zdielat kluce s organizaciou Y. Taktiez existuje poziadavka minimalizovat dopad na vykonnost. Ktory z nasledujucich pristupov naplna poziadavky?:</quizquestion>
+<answer>Pouzitie zabezpecenia na urovni sprav pomocou pridania symetrickej enkrypcie medzi sluzbami A,B a C. Tymto sposobom nie je obsah spravy dostupny akymkolvek sprostredkovatelom medzi sluzbami B a C. </answer>
+<answer>Pouzitie bezpecnosti na urovni transportnej vrstvy medzi sluzbami A a B. Bezpecnost na urovni sprav pomocou asymetrickej enkrypcie medzi sluzbami B a C.</answer>
+<answer>Pouzitie bezpecnosti na urovni transportnej vrstvy medzi sluzbami B a C a pouzitie bezpecnosti na urovni sprav pomocou asymetrickej enkrypcie medzi sluzbami A a B. Tymto sposobom su vsetky sluzby zabezpecene a zaroven minimalizujeme dopad na vykonnost medzi sluzbami B a C.</answer>
+<answer>Ziadna z vyssie uvedenych.</answer>
+  <correct>2</correct>
+ </question>
+
+      	
+    </questions>
+</quiz>

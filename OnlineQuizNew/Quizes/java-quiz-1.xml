@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<quiz>
+  <title>Sample Java Quiz</title>
+  <size>20</size>
+  <quizDuration>35</quizDuration>
+    <questions>
+    
+        <question>
+        <quizquestion>What is the length of Java datatype int ?</quizquestion>
+        <answer>32 bit</answer>
+        <answer>16 bit</answer>
+        <answer>64 bit</answer>
+        <answer>Runtime specific</answer>
+        <correct>1</correct>
+        <explanation> The integral types are byte, short, int, and long, whose values are 8-bit, 16-bit, 32-bit and 64-bit.</explanation>
+      </question>	
+    
+         <question>
+        <quizquestion>What is dependency injection?</quizquestion>
+        <answer>A design pattern where dependent objects are defined in an xml for easy maintainability.</answer>
+        <answer>This is a design pattern whereby dependent objects are passed into an object from the outside at the time application is initialized.</answer>
+        <answer>A unique feature of spring which allows object to be injected at the time of compilation.</answer>
+        <answer>None of above.</answer>
+        <correct>2</correct>
+        <explanation>
+        The basic concept of the Inversion of Control pattern (also known as dependency injection) is that you do not create your objects but describe how they should be created. You don't directly connect your components and services together in code but describe which services are needed by which components in a configuration file. 
+Hence dependency injection is a design pattern whereby dependent objects are passed into an object from the outside at the time application is initialized.
+Every java based application has a few objects that work together to present what the end-user sees as a working application. When writing a complex Java application, application classes should be as independent as possible of other Java classes to increase the possibility to reuse these classes and to test them independently of other classes while doing unit testing. Dependency Injection (or sometime called wiring) helps in gluing these classes together and same time keeping them independent.
+        </explanation>
+      </question>
+
+       <question>
+        <quizquestion>Which of the following component of HTTP request is used to identify the resource on server?</quizquestion>
+        <answer>VERB</answer>
+        <answer>URI</answer>
+        <answer>HTTP Version</answer>
+        <answer>Request Header</answer>
+        <correct>2</correct>
+        <explanation>
+ URIs are, as the third initial says, identifiers, that is, names. They identify resources, and often (although not always) allow you to access representations of those resources.
+        </explanation>
+      </question>	 	  
+       
+      <question>
+        <quizquestion>What will be the output of the program?
+       
+        public class Foo 
+        {  
+          public static void main(String[] args) 
+            {
+              try 
+              { 
+                return; 
+              } 
+              finally 
+              {
+                System.out.println( "Finally" ); 
+              } 
+            } 
+        }
+      </quizquestion>
+        <answer>Finally</answer>
+        <answer>Compilation fails.</answer>
+        <answer>The code runs with no output.</answer>
+        <answer>An exception is thrown at runtime.</answer>
+        <correct>1</correct>
+        <explanation>
+If you put a finally block after a try and its associated catch blocks, then once execution enters the try block, the code in that finally block will definitely be executed except in the following circumstances: 
+1.	An exception arising in the finally block itself.
+2.	The death of the thread.
+3.	The use of System.exit()
+4.	Turning off the power to the CPU.
+I suppose the last three could be classified as VM shutdown.
+        </explanation>
+      </question>
+      		
+      <question>
+        <quizquestion>A ClassNotFoundException is thrown when</quizquestion>
+        <answer>If a class is referenced with Java's  'new' operator but the runtime system cannot find the referenced class</answer>
+        <answer>An application tries to load in a class through its string name using 'Class.forName()' method.</answer>
+        <answer>An application tries to load in a class using static loading.</answer>
+        <answer>An application tries to load in a class using dynamic loading.</answer>
+        <correct>2</correct>
+        <explanation>
+The NoClassDefFoundError occurs when the source was successfully compiled, but at runtime, the required class files were not found. This may be something that can happen in the distribution or production of JAR files, where not all the required class files were included.
+As for ClassNotFoundException, it appears that it may stem from trying to make reflective calls to classes at runtime, but the classes the program is trying to call is does not exist.
+The difference between the two is that one is an Error and the other is an Exception. With NoClassDefFoundError is an Error and it arises from the Java Virtual Machine having problems finding a class it expected to find. A program that was expected to work at compile-time can't run because of class files not being found, or is not the same as was produced or encountered at compile-time. This is a pretty critical error, as the program cannot be initiated by the JVM.
+On the other hand, the ClassNotFoundException is an Exception, so it is somewhat expected, and is something that is recoverable. Using reflection is can be error-prone (as there is some expectations that things may not go as expected. There is no compile-time check to see that all the required classes exist, so any problems with finding the desired classes will appear at runtime.
+        </explanation>
+      </question>	
+	  
+	   <question>
+        <quizquestion>What will be the output of the program?
+
+public class RTExcept 
+{
+    public static void throwit () 
+    {
+        System.out.print("throwit ");
+        throw new RuntimeException();
+    }
+    public static void main(String [] args) 
+    {
+        try 
+        {
+            System.out.print("hello ");
+            throwit();
+        }
+        catch (Exception re ) 
+        {
+            System.out.print("caught ");
+        }
+        finally 
+        {
+            System.out.print("finally ");
+        }
+        System.out.println("after ");
+    }
+}
+      </quizquestion>
+        <answer>hello throwit caught</answer>
+        <answer>Compilation fails.</answer>
+        <answer>hello throwit RuntimeException caught after</answer>
+        <answer>hello throwit caught finally after</answer>
+        <correct>4</correct>
+        <explanation>
+The main() method properly catches and handles the RuntimeException in the catch block, finally runs (as it always does), and then the code returns to normal.
+A, B and C are incorrect based on the program logic described above. Remember that properly handled exceptions do not cause the program to stop executing.
+        </explanation>
+      </question>
+      		
+
+     <question>
+        <quizquestion>Which entry in WEB-INF is used to map a servlet ?</quizquestion>
+        <answer>servlet-mapping</answer>
+        <answer>servlet-registration</answer>
+        <answer>servlet-entry</answer>
+        <answer>servlet-attachment</answer>
+        <correct>1</correct>
+        <explanation>
+        No Specific explanation
+        </explanation>
+      </question>	
+
+	   <question>
+        <quizquestion>When is the Demo object eligible for garbage collection?
+
+1. class Test 
+2. {  
+3.     private Demo d; 
+4.     void start() 
+5.     {  
+6.         d = new Demo(); 
+7.         this.takeDemo(d); /* Line 7 */
+8.     } /* Line 8 */
+9.     void takeDemo(Demo demo) 
+10.     { 
+11.         demo = null;  
+12.         demo = new Demo(); 
+13.     } 
+14. }
+      </quizquestion>
+        <answer>After line 7</answer>
+        <answer>After line 8</answer>
+        <answer>After the start() method completes</answer>
+        <answer>When the instance running this code is made eligible for garbage collection.</answer>
+        <correct>4</correct>
+        <explanation>
+Option D is correct. By a process of elimination.
+Option A is wrong. The variable d is a member of the Test class and is never directly set to null. 
+Option B is wrong. A copy of the variable d is set to null and not the actual variable d. 
+Option C is wrong. The variable d exists outside the start() method (it is a class member). So, when the start() method finishes the variable d still holds a reference
+        </explanation>
+      </question>
+      
+      <question>
+        <quizquestion>What is true about cross-cutting concerns?</quizquestion>
+        <answer>The functions that span multiple points of an application are called cross cutting concerns.</answer>
+        <answer>Cross-cutting concerns are conceptually separate from the application's business logic.</answer>
+        <answer>Logging is one of the examples of cross cutting concerns.</answer>
+        <answer>All of the above.</answer>
+        <correct>4</correct>
+        <explanation>
+Cross-cutting concerns are the functions that span multiple points of an application.In any enterprise application, there are a number of concerns which need to be taken care of in addition to the main business logic. These concerns are spread across the application and into multiple application layers. Such concerns are logging, transaction handling, performance monitoring, security etc. These concerns are known as cross cutting concerns of the application.
+AOP help is implementing the cross cutting concerns of the application keeping them separate from the main business logic and thus resulting in loosely coupled applications.
+        </explanation>
+      </question>	 	  
+      
+     <question>
+        <quizquestion>Which of the following Aspect implementation spring supports?</quizquestion>
+        <answer>XML Schema based aspect implementation</answer>
+        <answer>@AspectJ based aspect implementation</answer>
+        <answer>Both of above.</answer>
+        <answer>None of above.</answer>
+        <correct>3</correct>
+        <explanation>
+Spring supports both XML Schema based and @AspectJ based aspect implementation.
+        </explanation>
+      </question>	 
+      	   
+      
+      <question>
+        <quizquestion>Which of the following class can be used to execute Sql queries in spring?</quizquestion>
+        <answer>JDBCHelper</answer>
+        <answer>JdbcTemplate</answer>
+        <answer>DBHelper</answer>
+        <answer>DBTemplate</answer>
+        <correct>2</correct>
+        <explanation>
+JdbcTemplate class can be used to execute Sql queries in spring.This is the central class in the JDBC core package. It simplifies the use of JDBC and helps to avoid common errors. It executes core JDBC workflow, leaving application code to provide SQL and extract results. This class executes SQL queries or updates, initiating iteration over ResultSets and catching JDBC exceptions and translating them to the generic, more informative exception hierarchy defined in the org.springframework.dao package. 
+        </explanation>
+      </question>	 	   
+      
+      <question>
+        <quizquestion>What is a pointcut ? Select a unique answer .</quizquestion>
+        <answer>Code to execute at a join point </answer>
+        <answer>An expression to identify joinpoints</answer>
+        <answer>An advice and a jointpoint</answer>
+        <answer>None of the above</answer>
+        <correct>2</correct>
+        <explanation>
+ Pointcut: a predicate that matches join points. Advice is associated with a pointcut expression and runs at any join point matched by the pointcut (for example, the execution of a method with a certain name). The concept of join points as matched by pointcut expressions is central to AOP, and Spring uses the AspectJ pointcut expression language by default
+        </explanation>
+      </question>	 	   
+      
+       <question>
+        <quizquestion>Spring event mechanism is based on the standard:</quizquestion>
+        <answer>Observer Design Pattern </answer>
+        <answer>Facade Design Pattern</answer>
+        <answer>Factory Design Pattern</answer>
+        <answer>Mediator Design Pattern</answer>
+        <correct>1</correct>
+        <explanation>
+Observer Design Pattern:- The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods. It is mainly used to implement distributed event handling systems
+        </explanation>
+      </question>	 	
+       
+      <question>
+        <quizquestion>What are the types of injection supported by Spring? </quizquestion>
+        <answer>Constructor Injection only</answer>
+        <answer>Constructor Injection and Setter Injection</answer>
+        <answer>Constructor Injection, Setter Injection and Interface Injection </answer>
+        <answer>Constructor Injection, Setter Injection before 2.0 and Interface Injection with 2.0 and above version</answer>
+        <correct>2</correct>
+        <explanation>
+Spring supports following type of injection 1. Constructor Injection 2. Setter Injection.  Interface injection describes the ability of a bean contener to inject a new interface to the bean, no matter that the class definition of this bean is not implementing it. Thats why interface injection is not supported in Spring. 
+        </explanation>
+      </question>	 	  
+      
+       <question>
+        <quizquestion>Which class is used to map a database row to a java object in spring?</quizquestion>
+        <answer>ResultSet</answer>
+        <answer>RowMapper</answer>
+        <answer>RowSetMapper</answer>
+        <answer>ResultSetMapper</answer>
+        <correct>2</correct>
+        <explanation>
+RowMapper class is used to map a database row to a java object in spring. An interface used by JdbcTemplate for mapping rows of a ResultSet on a per-row basis. Implementations of this interface perform the actual work of mapping each row to a result object, but don't need to worry about exception handling. SQLExceptions will be caught and handled by the calling JdbcTemplate.        
+        </explanation>
+      </question>	 
+      
+      <question>
+        <quizquestion>Which of the following is part of Data Access layer in Spring framework?</quizquestion>
+        <answer>Beans</answer>
+        <answer>Aspects</answer>
+        <answer>JMS</answer>
+        <answer>Context</answer>
+        <correct>3</correct>
+        <explanation>
+JMS is the part of Data Access layer in Spring framework. JMS can be roughly divided into two areas of functionality, namely the production and consumption of messages. The JmsTemplate class is used for message production and synchronous message reception. For asynchronous reception similar to Java EE’s message-driven bean style, Spring provides a number of message listener containers that are used to create Message-Driven POJOs (MDPs). Spring also provides a declarative way of creating message listeners.
+        </explanation>
+      </question>
+      
+       <question>
+        <quizquestion>Which of the following is correct about dependency injection?</quizquestion>
+        <answer>It helps in decoupling application objects from each other.</answer>
+        <answer>It helps in deciding the dependencies of objects.</answer>
+        <answer>It stores objects states in database.</answer>
+        <answer>It stores object states in file system.</answer>
+        <correct>1</correct>
+        <explanation>
+     Dependency injection helps in decoupling application objects from each other   
+        </explanation>
+      </question>	 	  
+      
+       <question>
+        <quizquestion>What are the ways to access Hibernate by using Spring?</quizquestion>
+        <answer>Inversion of Control with a Hibernate Template and Callback.</answer>
+        <answer>Extending HibernateDAOSupport and Applying an AOP Interceptor node.</answer>
+        <answer>Both of above.</answer>
+        <answer>None of above.</answer>
+        <correct>3</correct>
+        <explanation>
+Hibernate can be accessed by both ways either using Inversion of Control with a Hibernate Template and Callback or extending HibernateDAOSupport and applying an AOP Interceptor node.        
+        </explanation>
+      </question>	 	  
+      
+       <question>
+        <quizquestion>Which is the way to provide configuration metadata to spring?</quizquestion>
+        <answer>XML Based configuration file.</answer>
+        <answer>Annotation based configuration.</answer>
+        <answer>Java based configuration.</answer>
+        <answer>All of the above.</answer>
+        <correct>4</correct>
+        <explanation>
+ All of the above statements are correct.       
+        </explanation>
+      </question>	 
+      
+      <question>
+        <quizquestion>Which of the following annotation of JAX RS API states the HTTP Request type?</quizquestion>
+        <answer>@DELETE</answer>
+        <answer>@HEAD</answer>
+        <answer>@Produces</answer>
+        <answer>@Consumes</answer>
+        <correct>4</correct>
+        <explanation>
+@Consumes − States the HTTP Request type, for example application/x-www-form-urlencoded to accept form data in HTTP body during POST request.       
+        </explanation>
+      </question>	 	  	 	  	  	  	 	  	  
+      	
+    </questions>
+</quiz>
