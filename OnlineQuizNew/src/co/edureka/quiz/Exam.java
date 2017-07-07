@@ -33,6 +33,7 @@ public class Exam {
 		int number=i;
 		String options[]=new String[4];
 	    String question=null;
+	    String explanation=null;
 	    int correct=0;
 	    int[] correct_answers = {-1, -1, -1, -1 };
 	    
@@ -59,6 +60,10 @@ public class Exam {
             	correct=Integer.parseInt(childList.item(j).getTextContent());
             	counter_a++;
             }
+            else if("explanation".equals(childNode.getNodeName()))
+            {
+            	explanation=childList.item(j).getTextContent();
+            }
             
         }
 	    System.out.println("Retrieving Question Number "+number+ " for showing Results");
@@ -69,6 +74,7 @@ public class Exam {
 		q.setCorrectOptionIndex(correct);
 		q.setCorrectAnswersIndex(correct_answers);
 		q.setQuestionOptions(options);
+		q.setExplanation(explanation);
 		return q;
 	}
 		
@@ -76,6 +82,7 @@ public class Exam {
 	{   int number=i;
 		String options[]=new String[4];
 	    String question=null;
+	    String explanation=null;
 	    int correct=0;
 	    int[] correct_answers = {-1, -1, -1, -1 };
 	    
@@ -104,6 +111,10 @@ public class Exam {
             	correct=Integer.parseInt(childList.item(j).getTextContent());
             	counter_a++;
             }
+            else if("explanation".equals(childNode.getNodeName()))
+            {
+            	explanation=childList.item(j).getTextContent();
+            }
             
         }
 	    System.out.println("Retrieving Question Number "+number);
@@ -124,6 +135,7 @@ public class Exam {
 		q.setCorrectOptionIndex(correct);
 		q.setCorrectAnswersIndex(correct_answers);
 		q.setQuestionOptions(options);
+		q.setExplanation(explanation);
 		
 		//nastavujem zadane hodnoty do predchadzajucej otazky, pretoze tato funkcia sa vola, uz ked je inkrementalne pocitadlo zvysene o jedno (nastavuje sa tu dalsia nova otazka)
 	/*	if(answered.size()>0&& number>0)

@@ -8,10 +8,19 @@ public class QuizQuestion {
 	int questionNumber;
 	String question;
 	String questionOptions[];
+	String explanation;
 	int correctAnswersIndex[];
 	int correctOptionIndex;
 	int[] answeredItems={-1,-1,-1,-1};
 	
+	public void setExplanation(String expl)
+	{
+		explanation=expl;
+	}
+	public String getExplanation()
+	{
+		return explanation;
+	}
 	public void setAnsweredItem(int i)
 	{
 		answeredItems[i-1]=i;

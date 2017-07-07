@@ -80,14 +80,15 @@ Logged as <a href="#" class="button username">${sessionScope.user}</a>
 
 
 
-<div  style="position:absolute;left:10%;right:20%;top:150px;color:#000000">
+<div  style="position:absolute;left:5%;right:10%;top:150px;color:#000000">
 <b style="color:#dfe9ec"> List of all questions with correct answers for the last test in ${sessionScope.exam} Quiz: </b>
 <table id="t03" class="CSSTableGenerator1">
 <tr> 
 <td style="width: 5%"> <b>ID</b> </td> 
-<td style="width: 30%"> <b>Question</b> </td> <td style="width: 45%"><b> Options </b></td> 
- <td style="width: 10%"><b> Correct </b></td>
- <td style="width: 10%"><b> Answered </b></td>
+<td style="width: 20%"> <b>Question</b> </td> <td style="width: 35%"><b> Options </b></td> 
+ <td style="width: 5%"><b> Correct </b></td>
+ <td style="width: 5%"><b> Answered </b></td>
+ <td style="width: 30%"><b> Explanation</b></td>
 </tr>
 
 <%
@@ -130,7 +131,7 @@ String user = request.getSession().getAttribute("user").toString();
 					
 					"</td><td>["+correctAnswers+"]</td>"+
 					"<td>"+answers+"</td>"+
-					
+					"<td>"+question.getExplanation()+"</td>"+
 					"</tr>");
 	}
 	
